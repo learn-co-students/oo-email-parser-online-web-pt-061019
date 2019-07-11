@@ -7,6 +7,6 @@ class EmailParser
   end
 
   def parse
-    @emails.split(/,/||/\s/).map {|w| w.strip}
+    @emails.split(/, | /).uniq
   end
 end
